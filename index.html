@@ -1,50 +1,58 @@
-<!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Shadows+Into+Light" rel="stylesheet">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="/jspm_packages/github/hakimel/reveal.js@3.3.0/css/reveal.css">
+    <link rel="stylesheet" href="/jspm_packages/github/hakimel/reveal.js@3.3.0/css/theme/white.css">
+    <link rel="stylesheet" href="/src/css/common.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+</head>
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <div class="title_wrapper">
+                    <h1 class="title title_header" >T</h1>
+                    <img class="plain title_header no-margin" src="src/img/tor_logo.png" width="85px" height="85px">
+                    <h1 class="title title_header">R under the hood</h1>
+                </div>
+                <p class="author">
+                    by Ewa Nestorowicz
+                </p>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+            </section>
 
-		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				history: true,
+            <section>
+                <h1 class="title">
+                    Agenda
+                </h1>
+                <!--<p>-->
+                    <!--... and short description of your presentation.-->
+                <!--</p>-->
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+                <!--<p style="float: right; margin-top: 3em">-->
+                   <!--... and maybe a link <a href="/src/presentations/tor">here</a>-->
+                <!--</p>-->
+
+                <ul class="no-bullets">
+                    <li>What is TOR?</li>
+                    <li>Short history</li>
+                    <li>How does it work?</li>
+                    <li>Risks & threats?</li>
+                    <li>Curiosities</li>
+                </ul>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="/jspm_packages/system.js"></script>
+    <script src="/config.js"></script>
+    <script>
+        System.import('/src/js/main');
+    </script>
+</body>
+
 </html>
