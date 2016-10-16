@@ -116,3 +116,11 @@
 .reveal div.link_footer {
     padding-top: 40px;
 }
+
+.reveal .slides section .fragment.highlight-green.visible {
+    color: green !important;
+}
+
+.reveal .slides section .fragment.highlight-current-green.current-fragment {
+    color: green !important;
+}
