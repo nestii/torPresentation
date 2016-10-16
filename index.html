@@ -2,6 +2,7 @@
 
 <head>
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Shadows+Into+Light" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" href="/jspm_packages/github/hakimel/reveal.js@3.3.0/css/reveal.css">
     <link rel="stylesheet" href="/jspm_packages/github/hakimel/reveal.js@3.3.0/css/theme/white.css">
@@ -28,23 +29,380 @@
                 <h1 class="title">
                     Agenda
                 </h1>
-                <!--<p>-->
-                    <!--... and short description of your presentation.-->
-                <!--</p>-->
 
-                <!--<p style="float: right; margin-top: 3em">-->
-                   <!--... and maybe a link <a href="/src/presentations/tor">here</a>-->
-                <!--</p>-->
-
-                <ul class="no-bullets">
-                    <li>What is TOR?</li>
-                    <li>Short history</li>
-                    <li>How does it work?</li>
-                    <li>Risks & threats?</li>
-                    <li>Curiosities</li>
+                <ul class="coloured-bullets">
+                    <li><span class="fragment highlight-current-green">What is TOR?</span></li>
+                    <li><span>Short history</span></li>
+                    <li><span>How does it work?</span></li>
+                    <li><span>Risks & threats?</span></li>
+                    <li><span>Hidden services</span></li>
                 </ul>
             </section>
 
+            <section>
+                <h1 class="title">
+                    What is TOR?
+                </h1>
+                <blockquote class="fragment fade-up">"Tor is an anonymity tool used by those who want to stay private and uncensored when browsing the Internet."</blockquote>
+                <a class="fragment fade-up" href="http://jordan-wright.com/blog/2015/02/28/how-tor-works-part-one/">Jordan Wright Blog</a>
+
+            </section>
+
+            <section>
+                <h1 class="title">
+                    TOR:
+                </h1>
+                <ul class="coloured-bullets">
+                    <li class="fragment fade-up"><span>protects your <b>privacy</b> and <b>identity</b> on the internet</span></li>
+                    <li class="fragment fade-up"><span>keeps your location <b>unknown</b> for any websites and other services</span></li>
+                    <li class="fragment fade-up"><span><b>prevents</b> other people to watch your traffic locally</span></li>
+                    <li class="fragment fade-up"><span>makes your <b>habits</b> and <b>interests</b> unknown for any websites</span></li>
+                    <li class="fragment fade-up"><span>protects from <b>traffic analysis</b></span></li>
+                </ul>
+
+            </section>
+
+            <section>
+                <h1 class="title">
+                    TOR
+                </h1>
+                <a href="https://www.youtube.com/watch?v=JWII85UlzKw">Short introduction :)</a>
+
+            </section>
+
+            <section>
+                <h1 class="title">
+                    Agenda
+                </h1>
+
+                <ul class="coloured-bullets">
+                    <li><span class="point_checked">What is TOR?</span></li>
+                    <li><span class="fragment highlight-current-green">Short history</span></li>
+                    <li><span>How does it work?</span></li>
+                    <li><span>Risks & threats?</span></li>
+                    <li><span>Hidden services</span></li>
+                </ul>
+            </section>
+
+            <section data-background-iframe="http://www.informationsecuritybuzz.com/news/secret-history-tor/">
+            </section>
+
+            <section>
+                <h1 class="title">
+                    Agenda
+                </h1>
+
+                <ul class="coloured-bullets">
+                    <li><span class="point_checked">What is TOR?</span></li>
+                    <li><span class="point_checked">Short history</span></li>
+                    <li><span class="fragment highlight-current-green">How does it work?</span></li>
+                    <li><span>Risks & threats?</span></li>
+                    <li><span>Hidden services</span></li>
+                </ul>
+            </section>
+
+            <section>
+                <h1 class="title">
+                    How does TOR work?
+                </h1>
+                <blockquote class="fragment fade-up">The Tor software depends on the <b>Tor network</b>, which is made up of <b>Tor relays</b> operated by individuals and organizations all over the world. The more Tor relays we have running, <b>the faster, more robust, and more secure</b> the Tor network will be.</blockquote>
+                <a class="fragment fade-up" href="https://www.eff.org/torchallenge/what-is-tor.html">TOR CHALLENGE</a>
+
+            </section>
+
+            <section>
+                <h1 class="title">
+                    How does TOR work?
+                </h1>
+                <img class="plain" src="src/img/tor_relays.png">
+                <a class="fragment fade-up" href="http://jordan-wright.com/blog/2015/02/28/how-tor-works-part-one/">Image source</a>
+
+            </section>
+
+            <section>
+                <h1 class="title">
+                   TOR parts
+                </h1>
+                <ul class="coloured-bullets">
+                    <li class="fragment fade-up"><span>Entry/Guard Relay</span></li>
+                    <li class="fragment fade-up"><span>Middle Relay</span></li>
+                    <li class="fragment fade-up"><span>Exit Relay</span></li>
+                    <li class="fragment fade-up"><span>Bridges*</span></li>
+                </ul>
+            </section>
+
+            <section>
+                <h1 class="title">
+                    Tor structure
+                </h1>
+                <img class="fragment fade-up plain" src="src/img/tor-structure.jpg">
+                <a class="fragment fade-up" href="http://arstechnica.com/tech-policy/2014/07/report-rare-leaked-nsa-source-code-reveals-tor-servers-targeted/">Image source</a>
+
+            </section>
+
+            <section>
+                <h1 class="title">
+                    Entry guards
+                </h1>
+                <p class="coloured"><b>They are the entry points to the Tor network</b></p>
+                <p>Each Tor client selects a few relays at <b>random</b> to use as entry points, and uses only those relays for her first hop. </p>
+            </section>
+
+            <section>
+                <h1 class="title">
+                    Middle relays
+                </h1>
+                <p class="coloured"><b>They transport traffic from the guard relay to the exit relay</b></p>
+                <p>This prevents the <b>guard</b> and <b>exit relay</b> from knowing each other.</p>
+            </section>
+
+            <section>
+                <h1 class="title">
+                    Exit relays
+                </h1>
+                <p class="coloured"><b>The final relay that Tor traffic passes through before it reaches its destination</b></p>
+                <p>They are ran by <b>volunteers</b></p>
+            </section>
+
+            <section>
+                <h1 class="title">
+                    Bridges
+                </h1>
+                <p class="coloured"><b>Unpublished entry relays</b></p>
+                <p> Users that are behind <b>censored networks</b> can use bridges as a way to access the Tor network.</p>
+            </section>
+            <section>
+                <h1 class="title">
+                    TOR relays
+                </h1>
+                <p> Each of the nodes can only see the <b>data and the IP address</b> of the node in <b>front</b> and the node <b>behind</b> it. Therefore, no one can find out the complete path between your computer and the website you are connecting to at any point.
+                    Additionally, each completed path is good for only <b>10 minutes</b>, and then new <b>random paths</b> are generated.</p>
+                <a class="fragment fade-up" href="https://www.hotspotshield.com/resources/tor-vs-vpn/">FROM HOTSPOT SHIELD</a>
+            </section>
+
+            <section>
+                <h1 class="title">
+                    Why onion?
+                </h1>
+                <img class="fragment fade-up plain" src="src/img/tor_onion.png">
+                <a class="fragment fade-up" href="http://jordan-wright.com/blog/2015/02/28/how-tor-works-part-one/">Image source</a>
+            </section>
+
+            <section data-background-image="src/img/tor_volunteers.jpg">
+            </section>
+
+            <section>
+                <h1 class="title">
+                    TOR encryption
+                </h1>
+                <p class="fragment fade-up">Internet <b>data packet</b> consists of:</p>
+                <ul class="coloured-bullets">
+                    <li class="fragment fade-up"><span>Header for routing</span></li>
+                    <li class="fragment fade-up"><span>Payload</span></li>
+                </ul>
+                <p class="fragment fade-up">TOR <b>encrypts</b> data packet when it enters the Tor network.</p>
+                <span class="fragment fade-in">
+                    <span class="fragment highlight-red">Regular Internet connections don't do this.</span>
+                </span>
+            </section>
+
+            <section>
+                <h1 class="title">
+                    TOR encryption
+                </h1>
+                <p class="fragment fade-up">Each relay decrypt only a <b>piece</b> of an information to know which relay the data came from, and which relay to send it to next.</p>
+            </section>
+
+            <section>
+                <h1 class="title">
+                    TOR keys
+                </h1>
+                <ul class="coloured-bullets">
+                    <li class="fragment fade-up"><span>Encryption</span></li>
+                    <li class="fragment fade-up"><span>Authentication</span></li>
+                    <li class="fragment fade-up"><span>Coordination</span></li>
+                </ul>
+            </section>
+
+            <section>
+                <h1 class="title">
+                    Encryption
+                </h1>
+                <ul class="coloured-bullets">
+                    <li class="fragment fade-up"><span>All connections in Tor use TLS link encryption </span></li>
+                    <li class="fragment fade-up"><span><b>Only <b>the exit relay</b> can read the cells</b></span></li>
+                </ul>
+                <div class="link_footer">
+                    <a class="fragment fade-up" href="https://www.torproject.org">TOR PROJECT</a>
+                </div>
+            </section>
+
+            <section>
+                <h1 class="title">
+                    Authentication
+                </h1>
+                <ul class="coloured-bullets">
+                    <li class="fragment fade-up"><span><b>Every Tor relay</b>  has a public decryption key called the <i>onion key</i></span></li>
+                    <li class="fragment fade-up"><span>Each relay rotates its onion key <b>once a week</b></span></li>
+                </ul>
+                <div class="link_footer">
+                    <a class="fragment fade-up" href="https://www.torproject.org">TOR PROJECT</a>
+                </div>
+
+            </section>
+
+            <section>
+                <h1 class="title">
+                    Coordination
+                </h1>
+                <ul class="coloured-bullets">
+                    <li class="fragment fade-up"><span><b>Each relay</b> has a long-term public signing key called the <i>identity key</i> </span></li>
+                    <li class="fragment fade-up"><span>Each directory authority additionally has a <i>directory signing key</i> </span></li>
+                    <li class="fragment fade-up"><span>The directory authorities provide a <b>signed list</b> of all the known relays, and in that list are a set of certificates from each relay (self-signed by their identity key) specifying their keys, locations, exit policies, and so on. </span></li>
+                    <li class="fragment fade-up"><span>The only way to trick users into using a <b>fake</b> Tor network is to give them a specially modified version of the software</span></li>
+                </ul>
+                <div class="link_footer">
+                    <a class="fragment fade-up" href="https://www.torproject.org">TOR PROJECT</a>
+                </div>
+            </section>
+
+            <section>
+                <h1 class="title">
+                    TOR vs. proxy?
+                </h1>
+                <p class="fragment fade-up">Proxy:</p>
+                <ul class="coloured-bullets">
+                    <li class="fragment fade-up"><span>Users <b>enter</b> and <b>leave</b> through <b>the same server</b></span></li>
+                    <li class="fragment fade-up"><span>Public and private proxies; private more stable</span></li>
+                    <li class="fragment fade-up"><span>Protects <b>only a browser</b>, not your traffic in the Internet</span></li>
+                    <li class="fragment fade-up"><span>Most of them <b>know</b> your IP address</span></li>
+                </ul>
+
+            </section>
+
+            <section>
+                <h1 class="title">
+                   TOR vs. VPN
+                </h1>
+                <p class="fragment fade-up">VPN:</p>
+                <ul class="coloured-bullets">
+                    <li class="fragment fade-up"><span><b>Masks</b> your IP address and <b>encrypts</b> your internet traffic</span></li>
+                    <li class="fragment fade-up"><span>Acts as a <b>proxy</b> to connect to your desired website <b>on your behalf</b></span></li>
+                    <li class="fragment fade-up"><span>Website that you connect to can <b>only</b> see the IP address of the <b>VPN server, not yours</b></span></li>
+                    <li class="fragment fade-up"><span>All your internet traffic is encrypted</span></li>
+                    <li class="fragment fade-up"><span><b>Neither</b> ISP nor hackers can <b>snoop</b> your activity or <b>steal</b> your private information</span></li>
+                </ul>
+                <a class="fragment fade-up" href="https://www.hotspotshield.com/resources/tor-vs-vpn/">HOTSPOT SHIELD</a>
+            </section>
+            <section>
+                <h1 class="title">
+                    Agenda
+                </h1>
+
+                <ul class="coloured-bullets">
+                    <li><span class="point_checked">What is TOR?</span></li>
+                    <li><span class="point_checked">Short history</span></li>
+                    <li><span class="point_checked">How does it work?</span></li>
+                    <li><span class="fragment highlight-current-green">Risks & threats?</span></li>
+                    <li><span>Hidden services</span></li>
+                </ul>
+            </section>
+
+            <section>
+                <h1 class="title">
+                    Risks & threats
+                </h1>
+                <ul class="coloured-bullets">
+                    <li class="fragment fade-up"><span>Exit relays</span></li>
+                    <li class="fragment fade-up"><span>Active content</span></li>
+                    <li class="fragment fade-up"><span>Full anonymity?</span></li>
+                    <li class="fragment fade-up"><span>Internet blacklist</span></li>
+                </ul>
+
+            </section>
+
+            <section>
+                <h1 class="title">
+                    Exit relays
+                </h1>
+                <ul class="coloured-bullets">
+                    <li class="fragment fade-up"><span>Your traffic <b>can be monitored</b> there if you don't use HTTPS</span></li>
+                    <li class="fragment fade-up"><span>Malware</span></li>
+                    <li class="fragment fade-up"><span>SMTP without TLS may cause <b>privacy leaks</b></span></li>
+                    <li class="fragment fade-up"><span><b>Without HTTPS</b> your login, password, session cookie etc. can be <b>captured</b></span></li>
+                </ul>
+
+            </section>
+
+            <section>
+                <h1 class="title">
+                    Attacks
+                </h1>
+               <p class="fragment fade-up">It is <b>possible for an observer</b> who can view both you and either the destination website or your Tor exit node to <b>correlate timings</b> of your traffic as it enters the Tor network and also as it exits. <b>Tor does not defend against such a threat model.</b></p>
+                <div class="link_footer">
+                    <a class="fragment fade-up" href="https://www.torproject.org">TOR PROJECT</a>
+                </div>
+            </section>
+
+            <section>
+                <h1 class="title">
+                    Active content
+                </h1>
+                <p class="fragment fade-up highlight-current-green">Java, Javascript, Adobe Flash, Adobe Shockwave, QuickTime, RealAudio, ActiveX controls, VBScript</p>
+                <p class="fragment fade-up">Some sites require third party browser plugins such as Flash. <b>Plugins operate independently from Firefox</b> and can perform activity on your computer that <b>ruins your anonymity</b>. This includes but is not limited to: completely disregarding proxy settings, querying your local IP address, and storing their own cookies.</p>
+                <div class="link_footer">
+                    <a class="fragment fade-up" href="https://www.torproject.org">TOR PROJECT</a>
+                </div>
+            </section>
+
+            <section>
+                <h1 class="title">
+                    Full anonymity?
+                </h1>
+                <p class="fragment fade-up highlight-red"><b>NO</b></p>
+                <p class="fragment fade-up"><b>Virtual machines</b> may have the ability to <b>ignore your configured proxy settings</b>, and therefore bypass Tor and <b>share information directly to other sites on the Internet</b>. The virtual machine may be able to store data, such as cookies, completely separate from your browser or operating system data stores. Therefore, these technologies must be <b>disabled in your browser to use Tor safely.</b></p>
+                <div class="link_footer">
+                    <a class="fragment fade-up" href="https://www.torproject.org">TOR PROJECT</a>
+                </div>
+            </section>
+
+            <section>
+                <h1 class="title">
+                    Black list
+                </h1>
+                <p class="fragment highlight-red"><b>You go there, if the node is involved in illegal activities</b></p>
+
+            </section>
+
+            <section>
+                <h1 class="title">
+                    Agenda
+                </h1>
+
+                <ul class="coloured-bullets">
+                    <li><span class="point_checked">What is TOR?</span></li>
+                    <li><span class="point_checked">Short history</span></li>
+                    <li><span class="point_checked">How does it work?</span></li>
+                    <li><span class="point_checked">Risks & threats?</span></li>
+                    <li><span class="fragment highlight-current-green">Hidden services</span></li>
+                </ul>
+            </section>
+
+            <section>
+                <h1 class="title">
+                    Hidden services
+                </h1>
+
+                <p class="fragment fade-up"> A <i>.onion</i> address points to a Tor <b>hidden service</b>, which is a server you can only access through Tor. This means that your browsing activity <b>can’t be snooped on by someone watching the Tor exit nodes.</b> </p>
+                <p class="fragment fade-up">For example, Facebook maintains an <b>official Tor hidden services</b> address at “https://facebookcorewwwi.onion/”. This allows you to access Facebook through Tor, and your connection doesn’t ever leave Tor where it can be snooped on. </p>
+                <a class="fragment fade-up" href="http://www.howtogeek.com/272049/how-to-access-.onion-sites-also-known-as-tor-hidden-services/">FROM HOW TO GEEK</a>
+            </section>
+
+            <section>
+                <h1 class="title">
+                    Questions?
+                </h1>
+            </section>
         </div>
     </div>
 
